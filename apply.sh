@@ -12,7 +12,7 @@ echo "Installing Plugins..."
 vim -c 'PluginInstall'
 vim -c 'PluginUpdate'
 
-if [ $(grep "colors" ~/.vimrc | wc -c) -gt 0 ]
+if [ $(grep "colors" ~/.vimrc | wc -c) -eq 0 ]
 then
 	echo "Adding Colrschemes..."
 	echo "source ~/.vim/colors.vim" >> ~/.vimrc
