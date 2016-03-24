@@ -1,16 +1,21 @@
 if [ ! -e ~/.vim/bundle/Vundle.vim ]
 then
+	echo "Downloading Vundle plugin..."
 	mkdir -p ~/.vim ~/.vim/bundle ~/.vim/undo ~/.vim/colors
 	(cd ~/.vim/bundle; git clone https://github.com/VundleVim/Vundle.vim)
 	echo "source ~/.vim/vimrc" >> ~/.vimrc
 fi
 
-cp -i vimrc ~/.vim/
-cp -i *.vim ~/.vim/
+echo "Copying vim files..."
+cp -i ./vim/* ~/.vim/
+echo "Installing Plugins..."
 vim -c 'PluginInstall'
 vim -c 'PluginUpdate'
 
-if [ $(grep "colors.vim" ~/.vimrc | wc -c) -gt 0 ]
+if [ $(grep "colors" ~/.vimrc | wc -c) -gt 0 ]
 then
-	echo "source ~/.vim/colors.vim >> ~/.vimrc"
+	echo "Adding Colrschemes..."
+	echo "source ~/.vim/colors.vim" >> ~/.vimrc
 fi 
+
+echo "Install Complete."
