@@ -91,7 +91,7 @@ map <F12> ggVG=``zz
 imap <F9> <ESC>:qa!<CR>
 map <F9> <ESC>:qa!<CR>
 
-map <F3> :execute " grep -srnw --binary-files=without-match --exclude-dir=.git --exclude-from=exclude.list . -e " . expand("<cword>") . " " <bar> cwindow<CR>
+map <F3> :silent execute " grep! " . expand("<cword>") . " " <bar> cwindow<CR>
 
 
 " Rebind <Leader> Key
