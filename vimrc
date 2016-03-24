@@ -1,5 +1,7 @@
 set nocompatible
 
+command! -nargs=+ NewGrep execute 'silent grep! <args>' | copen 4 | redraw!
+
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -9,13 +11,12 @@ Plugin 'The-NERD-Tree'
 Plugin 'ctrlp.vim'
 Plugin 'surround.vim'
 Plugin 'jellybeans.vim'
-Plugin 'rking/ag.vim'
+Plugin 'morhetz/gruvbox'
+if executable('ag')
+	Plugin 'rking/ag.vim'
+endif
 call vundle#end()
 
-" Pathogen
-"execute pathogen#infect()
-"call pathogen#infect()
-"call pathogen#runtime_append_all_bundles()  " use pathogen
 filetype plugin indent on
 
 " NERDTree
@@ -28,7 +29,16 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
-"let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+" Ignore some folders and files for CtrlP indexing
+let g:ctrlp_custom_ignore = {
+			\ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+			\ 'file': '\.so$\|\.dat$|\.DS_Store$'
+			\ }
+if executable('ag')
+	set grepprg=ag\ --nogroup\ --nocolor
+	let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+	let g:ctrlp_use_caching = 0
+endif
 
 " Settings
 syntax on
@@ -81,6 +91,9 @@ map <F12> ggVG=``zz
 imap <F9> <ESC>:qa!<CR>
 map <F9> <ESC>:qa!<CR>
 
+map <F3> :execute " grep -srnw --binary-files=without-match --exclude-dir=.git --exclude-from=exclude.list . -e " . expand("<cword>") . " " <bar> cwindow<CR>
+
+
 " Rebind <Leader> Key
 let mapleader=','
 
@@ -91,6 +104,7 @@ map <Leader>n <esc>:tabprevious<CR>
 map <Leader>q <esc>:q<CR>
 map <Tab> <C-w>w
 map <Leader><Tab> <esc>:vs<CR><C-w>w
+map <Leader>g <esc>:NewGrep 
 
 " Better Indentation
 vnoremap > >gv 
@@ -134,7 +148,8 @@ set t_Co=256
 set t_ut=
 
 set background=dark
-colorscheme jellybeans
+"colorscheme jellybeans
+colorscheme gruvbox 
 
 hi Search term=reverse ctermbg=Red ctermfg=Black guibg=Yellow guifg=Black
 hi CursorColumn term=reverse ctermbg=Black guibg=grey40
