@@ -6,6 +6,7 @@ Plugin 'fugitive.vim'
 Plugin 'The-NERD-Tree'
 Plugin 'ctrlp.vim'
 Plugin 'surround.vim'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'jellybeans.vim'
 Plugin 'morhetz/gruvbox'
 if executable('ag')

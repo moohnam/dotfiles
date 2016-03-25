@@ -24,11 +24,13 @@ vnoremap > >gv
 vnoremap < <gv
 
 " Better Moving
+vnoremap jkl <ESC>
 inoremap jk <ESC>
 inoremap jj <ESC>gj
 inoremap kk <ESC>gk
 nmap j gj
 nmap k gk
+
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 inoremap <C-b> <Left>
