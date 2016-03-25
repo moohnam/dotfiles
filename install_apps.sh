@@ -1,4 +1,4 @@
-WD = $(pwd)
+WD=$(dirname "$0")
 
 # MAKE PERSONAL BINARY DIR
 if [ ! -d "$HOME/bin" ] ; then
