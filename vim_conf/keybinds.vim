@@ -5,8 +5,8 @@ nnoremap <space> za
 imap <F12> <ESC>ggVG=``zzi
 map <F12> ggVG=``zz
 
-imap <F9> <ESC>:qa!<CR>
-map <F9> <ESC>:qa!<CR>
+imap <F9> <ESC>:q!<CR>
+map <F9> <ESC>:q!<CR>
 
 " Rebind <Leader> Key
 let mapleader=','
