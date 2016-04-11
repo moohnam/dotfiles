@@ -14,9 +14,10 @@ let mapleader=','
 map <Leader>r <esc>:source $HOME/.vim/vimrc<CR>
 map <Leader>c <esc>:tabnew<CR>
 map <Leader>m <esc>:tabnext<CR>
-map <Leader>n <esc>:tabprevious<CR>
+:ap <Leader>n <esc>:tabprevious<CR>
 map <Leader>q <esc>:q<CR>
-map <Tab> <C-w>w
+map <Tab> <C-w>
+map <Tab><Tab> <C-w>w
 map <Leader><Tab> <esc>:vs<CR><C-w>w
 
 " Better Indentation
