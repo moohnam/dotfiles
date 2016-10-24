@@ -28,6 +28,7 @@ vnoremap < <gv
 inoremap jk <ESC>
 inoremap jj <ESC>gj
 inoremap kk <ESC>gk
+inoremap yy <ESC>yy
 inoremap :wq <ESC>:wq
 nmap j gj
 nmap k gk
