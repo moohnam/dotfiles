@@ -12,6 +12,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'spf13/vim-colors'
 Plugin 'EasyMotion'
+Plugin 'godlygeek/tabular'
 if executable('ag')
 	Plugin 'rking/ag.vim'
 endif
@@ -52,6 +53,7 @@ let g:syntastic_check_on_wq = 0
 
 
 " NERD Commenter
+noremap <F4> <Plug>NERDCommenterToggle
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
