@@ -43,7 +43,7 @@ endif
 
 " Syntastic for new user (:help syntastic)
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
@@ -53,7 +53,7 @@ let g:syntastic_check_on_wq = 0
 
 
 " NERD Commenter
-noremap <F4> <Plug>NERDCommenterToggle
+map <F4> <Plug>NERDCommenterToggle
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
