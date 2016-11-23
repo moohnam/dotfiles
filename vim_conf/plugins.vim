@@ -13,6 +13,7 @@ Plugin 'Shougo/neocomplcache.vim'
 Plugin 'spf13/vim-colors'
 Plugin 'EasyMotion'
 Plugin 'godlygeek/tabular'
+Plugin 'vim-airline/vim-airline'
 if executable('ag')
 	Plugin 'rking/ag.vim'
 endif
@@ -160,3 +161,6 @@ let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplcache_force_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+" Air-line last status all the time
+set laststatus=2
