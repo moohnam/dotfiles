@@ -15,6 +15,8 @@ map <Leader>r <esc>:source $HOME/.vim/vimrc<CR>
 map <Leader>c <esc>:tabnew<CR>
 map <Leader>m <esc>:tabnext<CR>
 map <Leader>n <esc>:tabprevious<CR>
+map <Leader>] <esc>:bn<CR>
+map <Leader>[ <esc>:bp<CR>
 map <Leader>q <esc>:q<CR>
 map <Tab> <C-w>
 map <Tab><Tab> <C-w>w
