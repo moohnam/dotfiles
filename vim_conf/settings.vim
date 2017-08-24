@@ -14,22 +14,25 @@ set ruler
 set history=1000
 set cursorline
 set number
-set laststatus=2
 set undofile
 set undodir=~/.vim/undo
 
 " Folding
 set foldenable
-set foldmethod=indent "Other acceptable values are marker, manual, expr, syntax, diff. Run :help foldmethod to find out what each of those do.
-set foldnestmax=10
-set foldlevelstart=10
+"set foldmethod=indent "Other acceptable values are marker, manual, expr, syntax, diff. Run :help foldmethod to find out what each of those do.
+"set foldnestmax=10
+"set foldlevelstart=10
+set foldmethod=marker
+set cino=N-s
+match Error /{{{\|}}}/
 
 " Tab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set shiftround
 set expandtab
+autocmd FileType make setlocal noexpandtab
 
 " Search
 set hlsearch
