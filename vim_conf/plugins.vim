@@ -14,6 +14,7 @@ Plugin 'spf13/vim-colors'
 Plugin 'EasyMotion'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 if executable('ag')
 	Plugin 'rking/ag.vim'
 endif
@@ -164,3 +165,5 @@ let g:neocomplcache_force_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " Air-line last status all the time
 set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+
