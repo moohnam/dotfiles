@@ -43,3 +43,15 @@ set smartcase
 " No backup and swap file
 set nowritebackup
 set noswapfile
+
+" GUI setting
+if has('gui_running')
+  set syntax=markdown
+  set encoding=cp949
+  set fileencodings=utf-8,cp949
+  set langmenu=cp949
+  set guifont=D2Coding:h12:cHANGEUL:qDRAFT
+  set lines=26 columns=80
+  cd ~/Documents/Notes/
+endif 
+
