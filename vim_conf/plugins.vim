@@ -5,7 +5,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'fugitive.vim'
 Plugin 'ctrlp.vim'
 Plugin 'surround.vim'
-Plugin 'jellybeans.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -44,6 +43,8 @@ if executable('ag')
 	let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 	let g:ctrlp_use_caching = 0
 endif
+map <leader>b <esc>:CtrlPBuffer<CR>
+map <leader>v <esc>:CtrlPMRU<CR>
 
 " Syntastic for new user (:help syntastic)
 set statusline+=%#warningmsg#
