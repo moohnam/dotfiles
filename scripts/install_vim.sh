@@ -12,6 +12,6 @@ fi
               --enable-multibyte \
               --enable-pythoninterp \
               --enable-gui=gtk2 \
-              --bindir=$HOME/bin \
-							--prefix=$HOME/.vim;
+              --bindir=$HOME/.local/bin \
+              --prefix=$HOME/.local;
 make -j8 install )

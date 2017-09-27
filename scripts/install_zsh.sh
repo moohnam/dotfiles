@@ -7,4 +7,4 @@ else
 	git pull
 	cd ..
 fi
-(cd zsh; Util/preconfig; ./configure --prefix=$HOME/.zsh/ --bindir=$HOME/bin/; make -j8 install)
+(cd zsh; Util/preconfig; ./configure --prefix=$HOME/.local/ --bindir=$HOME/.local/bin/; make -j8 install; echo "SHELL=$HOME/.local/bin/zsh\nexec $HOME/.local/bin/zsh -l" >> ~/.bash_profile)

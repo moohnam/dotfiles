@@ -8,5 +8,5 @@ else
 	cd ..
 fi
 (cd tmux; $SHELL autogen.sh;
-./configure --bindir=$HOME/bin/ --prefix=$HOME/.tmux;
+./configure --bindir=$HOME/.local/bin/ --prefix=$HOME/.local/;
 make -j8 install)

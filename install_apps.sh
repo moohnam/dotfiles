@@ -1,15 +1,13 @@
 WD=$(dirname "$0")
 
 # MAKE PERSONAL BINARY DIR
-if [ ! -d "$HOME/bin" ] ; then
-		mkdir "$HOME/bin"
-    PATH="$HOME/bin:$PATH"
+if [ ! -d "$HOME/.local" ] ; then
+		mkdir "$HOME/.local"
+        mkdir "$HOME/.local/bin
+    PATH="$HOME/.local/bin:$PATH"
 fi
 
 cd $WD/scripts
-# TMUX INSTALL
-$SHELL install_tmux.sh
-
 # VIM INSTALL
 $SHELL install_vim.sh
 
@@ -18,3 +16,7 @@ $SHELL install_zsh.sh
 
 # OH-MY-ZSH
 $SHELL install_omz.sh
+
+# TMUX INSTALL
+$SHELL install_tmux.sh
+

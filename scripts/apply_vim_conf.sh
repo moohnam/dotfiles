@@ -14,7 +14,7 @@ vim -c 'PluginUpdate'
 
 if [ $(grep "colors" $HOME/.vimrc | wc -c) -eq 0 ]
 then
-	echo "Adding Colrschemes..."
+	echo "Adding Colorschemes..."
 	echo "source $HOME/.vim/colors.vim" >> $HOME/.vimrc
 fi 
 
