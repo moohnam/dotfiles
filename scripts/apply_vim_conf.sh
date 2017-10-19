@@ -1,3 +1,4 @@
+git clone https://github.com/nammh/.vim $HOME/.vim
 if [ ! -e $HOME/.vim/bundle/Vundle.vim ]
 then
 	echo "Downloading Vundle plugin..."
@@ -6,8 +7,6 @@ then
 	echo "source $HOME/.vim/vimrc" >> $HOME/.vimrc
 fi
 
-echo "Copying vim files..."
-cp -i ../vim_conf/* $HOME/.vim/
 echo "Installing Plugins..."
 vim -c 'PluginInstall'
 vim -c 'PluginUpdate'
