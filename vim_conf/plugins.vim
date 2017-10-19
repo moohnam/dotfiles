@@ -13,6 +13,7 @@ Plugin 'EasyMotion'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'nathanaelkane/vim-indent-guides'
 if executable('ag')
 	Plugin 'rking/ag.vim'
 endif
