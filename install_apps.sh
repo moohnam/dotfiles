@@ -14,9 +14,6 @@ $SHELL install_vim.sh
 # ZSH INSTALL
 $SHELL install_zsh.sh
 
-# OH-MY-ZSH
-$SHELL install_omz.sh
-
 # TMUX INSTALL
 $SHELL install_tmux.sh
 
